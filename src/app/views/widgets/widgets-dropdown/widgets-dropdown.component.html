@@ -1,0 +1,53 @@
+<c-row>
+  <c-col sm="12" xl="4">
+    <c-widget-stat-a
+      class="mb-4"
+      color="primary"
+      title="Temperature"
+    >
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        26°
+        <span class="fs-6 fw-normal">
+          (2°<svg cIcon name="cilArrowBottom"></svg>)
+        </span>
+      </ng-template>
+      <ng-template cTemplateId="widgetChartTemplate">
+        <c-chart [data]="data[0]" [options]="options[0]" class="mt-3 mx-3" height="70" type="line"></c-chart>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+  <c-col sm="12" xl="4">
+    <c-widget-stat-a
+      [title]="'Pressure'"
+      class="mb-4"
+      color="success"
+    >
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <span>50</span>
+        <span class="fs-6 fw-normal">
+          (6 <svg cIcon name="cilArrowTop"></svg>)
+        </span>
+      </ng-template>
+      <ng-template cTemplateId="widgetChartTemplate">
+        <c-chart [data]="data[1]" [options]="options[1]" class="mt-3 mx-3" height="70" type="line"></c-chart>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+  <c-col sm="12" xl="4">
+    <c-widget-stat-a
+      [title]="'Humidity'"
+      class="mb-4"
+      color="danger"
+    >
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <span>40</span>
+        <span class="fs-6 fw-normal">
+          (3 <svg cIcon name="cilArrowTop"></svg>)
+        </span>
+      </ng-template>
+      <ng-template cTemplateId="widgetChartTemplate">
+        <c-chart [data]="data[2]" [options]="options[2]" class="mt-3" height="70" type="line"></c-chart>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+</c-row>
